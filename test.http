@@ -1,0 +1,76 @@
+### api calls for our DEMOAPI
+
+GET http://localhost:3000/ HTTP/1,1
+
+
+
+### GET all blogpost
+
+GET http://localhost:3000/api/blogposts HTTP/1,1
+
+### GET one blogposts
+
+GET http://localhost:3000/api/blogposts/2 HTTP/1,1
+
+### GET all users
+
+GET http://localhost:3000/api/users/ 
+
+### GET user by ID
+
+GET http://localhost:3000/api/users/7
+
+### GET all todos
+
+GET http://localhost:3000/api/todos/ 
+
+### GET todos by ID
+
+GET http://localhost:3000/api/todos/7
+
+### Post Blog
+POST http://localhost:3000/api/blogposts/ HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Sample blog post title",
+    "body": "Text of a sample blog post",
+    "userId": 2
+}
+
+### Put test Blog
+PUT http://localhost:3000/api/blogposts/1 HTTP/1.1
+content-type: application/json
+
+{
+   "id": 1,
+   "title": "Our trip to Paris, France",
+   "body": "We finally saw Eiffel Tower.",
+   "userId": 2
+}
+
+###DELETE Blog
+DELETE http://localhost:3000/api/blogposts/1 HTTP/1.1
+
+### Post todos
+POST http://localhost:3000/api/todos/ HTTP/1.1
+content-type: application/json
+
+{
+    "title": "need to do this",
+    "userId": 2
+}
+
+### Put test todos
+PUT http://localhost:3000/api/todos/1 HTTP/1.1
+content-type: application/json
+
+{
+   "id": 1,
+   "title": "Go to France",
+   "completed":false,
+   "userId": 2
+}
+
+###DELETE todos
+DELETE http://localhost:3000/api/todos/1 HTTP/1.1
